@@ -314,7 +314,6 @@ const CH=[
  {n:'Solarius',k:'solarius',atk:['soldisc','sunsun','solbeam'],hp:120,spd:148,rar:3,pas:'Sus discos atraviesan más enemigos y regresan a él.'},
 ];
 const RARN=['Común','Raro','Épico','Legendario'];
-const WEAPONS=['swords','meteors','blackhole','dragon','crystal','hammer','spores','prism'];
 const PAS=[
  {k:'boots',n:'Botas',max:6,d:l=>`Velocidad +${Math.round((1.1**l-1)*100)}% y estela de polvo`},
  {k:'pat',n:'Corazón',max:6,d:l=>`Vida máx. +${25*l} y curas 25`},
@@ -416,7 +415,7 @@ $('tolobby').onclick=toLobby;$('quit').onclick=toLobby;$('cont').onclick=()=>res
 function start(){
  S={state:'play',t:0,kills:0,spawn:0,boss:80,bn:0,bio:0,xp:0,lvl:1,need:5,pend:0,shake:0,cx:0,cy:0,en:[],sh:[],eb:[],al:[],wh:[],gem:[],chests:[],chestTimer:9,chestsOpened:0,fx:[],vx:[],pq:[],hr:[],pt:[],ft:[],tg:[],zn:[],P:[],
   rf:null,nextRift:50,rn:0,fi:0,bk:0,rifts:0,taken:0,dm:{},rr:2,dmgMul:1,xpMul:1,defMul:1,rift:null,saved:null,leave:0,pw:0,pows:[],cb:null,rrShow:0,lvSeq:0,lvR:null};
- const NP=NET.on?NET.roster.length:(coop?2:1);for(let i=0;i<NP;i++){const c=CH[NET.on?NET.roster[i].char:pick[i]]||CH[0],lv={boots:0,pat:0,car:0,dmgup:0,cdr:0,regen:0,crit:0,def:0};c.atk.forEach((id,j)=>lv[id]=j?0:1);WEAPONS.forEach(id=>lv[id]=0);
+ const NP=NET.on?NET.roster.length:(coop?2:1);for(let i=0;i<NP;i++){const c=CH[NET.on?NET.roster[i].char:pick[i]]||CH[0],lv={boots:0,pat:0,car:0,dmgup:0,cdr:0,regen:0,crit:0,def:0};c.atk.forEach((id,j)=>lv[id]=j?0:1);
   S.P.push({c,i,pn:NET.on?NET.roster[i].name:undefined,x:i*70,y:0,hp:c.hp,max:c.hp,spd:c.spd,mag:70,face:1,inv:0,dead:false,pos:[],ang:0,dx:0,dy:0,cd:{},hop:null,lv,rr:2,nb:3,keys:i?['arrowup','arrowleft','arrowdown','arrowright']:['w','a','s','d']})}
  S.P.forEach(initP);S.ban=[];S.nb=3;S.banMode=0;S.coins=0;S.wx={k:'clear',t:35};
  ['lobby','over','levelup','pause','meta','codes','coinbox'].forEach(i=>$(i).classList.add('hidden'));$('hud').classList.remove('hidden');
@@ -584,7 +583,7 @@ function toggleBan(){if(S&&S.state=='levelup'&&S.rrShow&&S.nb>0){S.banMode=!S.ba
 function reroll(){if(NET.on&&NET.host&&S&&S.lvR){rerollHost();return}if(NET.on&&!NET.host&&(NET.lvOpen||(S&&S.state=='levelup'))){if(NET.sock)NET.sock.emit('reroll',{seq:NET.seq});return}if(S&&S.state=='levelup'&&S.rrShow&&S.rr>0){S.rr--;levelUp()}}
 function levelUp(){
  if(NET.on){levelUpCoop();return}
- S.lvT=-1;const Ap=alive(),ids=[...new Set([...Ap.flatMap(p=>p.c.atk),...WEAPONS])].filter(id=>Ap.some(p=>p.lv[id]!=null&&p.lv[id]<8));
+ S.lvT=-1;const Ap=alive(),ids=[...new Set(Ap.flatMap(p=>p.c.atk))].filter(id=>Ap.some(p=>p.lv[id]!=null&&p.lv[id]<8));
  const pool=[...ids.map(id=>({id})),...PAS.filter(u=>u.ok?u.ok():Ap[0].lv[u.k]<u.max)].filter(u=>!S.ban.includes(u.id||u.k)).sort(()=>Math.random()-.5).slice(0,4);
  if(!pool.length){S.pend=0;S.state='play';return}
  S.rrShow=1;

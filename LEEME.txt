@@ -2,21 +2,20 @@ FP SURVIVOR 3D ONLINE
 =====================
 
 Juego survivor 3D con online cooperativo (salas públicas/privadas, hasta 4 jugadores).
-Incluye 22 personajes (10 nuevos) y 8 armas evolutivas nuevas, con modelos 3D, animaciones,
-efectos y etapas de evolución reales.
+Incluye 22 personajes (10 nuevos), cada uno con sus 3 ataques propios en exclusiva, con modelos 3D,
+animaciones, efectos y etapas de evolución reales.
 
 NOVEDADES DE ESTA VERSIÓN (v2)
 - Nivel cooperativo individual: al subir de nivel, CADA jugador recibe sus propias 4 cartas
-  (según sus armas y pasivas) y elige la suya. La ronda sigue cuando todos los jugadores vivos
+  (según sus ataques y pasivas) y elige la suya. La ronda sigue cuando todos los jugadores vivos
   han elegido. Cada jugador tiene sus propios 2 cambios de opciones (reroll).
 - Invitado mejorado: el movimiento se envía al instante al pulsar/soltar una tecla, se limpia al
   perder el foco de la ventana y la posición se corrige de forma suave (sin tirones). Snapshots a
   20 Hz en partidas de 1-2 jugadores y 15 Hz con 3-4 jugadores.
 - Personajes nuevos: Ignis, Volt, Glacius, Myko, Umbra, Bolt-01, Nova, Rocco, Nami y Solarius.
   Cada uno tiene ataque básico, especial, pasiva, evolución, estadísticas, rareza y modelo 3D.
-- Armas nuevas: espadas orbitales, lluvia de meteoritos, agujero negro, dragón espiritual,
-  prisión de cristal, martillo titán, nube de esporas y rayo prismático. Suben de nivel y
-  cambian de aspecto/efecto al evolucionar.
+- Ataques exclusivos: cada personaje solo puede subir sus 3 ataques propios. Ya no hay armas
+  compartidas, así que nunca te saldrán las habilidades de otro personaje.
 - Todo se compra/desbloquea con el sistema de progresión y la tienda que ya existía.
 - El lobby muestra modelo animado, nombre, descripción, ataques, pasiva, evolución, rareza,
   estadísticas, precio y estado bloqueado de cada personaje.

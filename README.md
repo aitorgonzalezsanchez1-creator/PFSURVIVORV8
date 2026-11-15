@@ -1,13 +1,13 @@
 # PFSURVIVORV8 — FP Survivor 3D Online
 
-Juego **survivor 3D** con cooperativo online para **hasta 4 jugadores**, 22 personajes y 8 armas evolutivas. Todo corre en el navegador (Three.js) y el multijugador funciona con un servidor Node.js + Socket.IO.
+Juego **survivor 3D** con cooperativo online para **hasta 4 jugadores** y 22 personajes, cada uno con sus 3 ataques propios. Todo corre en el navegador (Three.js) y el multijugador funciona con un servidor Node.js + Socket.IO.
 
 ## Características
 
 - 22 personajes con ataque básico, especial, pasiva, evolución y modelo 3D.
-- 8 armas nuevas evolutivas (espadas orbitales, lluvia de meteoritos, agujero negro, dragón espiritual, prisión de cristal, martillo titán, nube de esporas y rayo prismático).
+- Cada personaje solo puede subir **sus 3 ataques propios**: no hay armas compartidas entre personajes.
 - Salas públicas y privadas con código de 6 caracteres, sin escribir ninguna dirección de servidor.
-- Nivel cooperativo **individual**: cada jugador recibe sus propias 4 cartas según sus armas/pasivas, elige la suya y tiene 2 rerolls propios. La ronda sigue cuando todos los jugadores vivos han elegido.
+- Nivel cooperativo **individual**: cada jugador recibe sus propias 4 cartas según sus ataques/pasivas, elige la suya y tiene 2 rerolls propios. La ronda sigue cuando todos los jugadores vivos han elegido.
 - Invitado mejorado: envío de controles al instante, limpieza de teclas al perder el foco y corrección de posición suave (snapshots a 20 Hz con 1–2 jugadores y 15 Hz con 3–4).
 - Progresión, tienda, objetos, logros, codes y calidad gráfica AUTO/ULTRA/ALTO/MEDIO/BAJO.
 - Diagnóstico con F3: FPS, ping, snapshots, entidades, draw calls, triángulos, memoria y calidad.
