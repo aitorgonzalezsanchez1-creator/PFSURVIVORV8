@@ -1,0 +1,9 @@
+{
+  "name": "fp-survivor-3d-online",
+  "version": "1.0.0",
+  "private": true,
+  "description": "FP Survivor 3D cooperativo online de hasta 4 jugadores",
+  "main": "server.js",
+  "scripts": { "start": "node server.js" },
+  "dependencies": { "express": "^4.21.2", "socket.io": "^4.8.1" }
+}
