@@ -1934,7 +1934,7 @@ function goneP(slot){
  if(!alive().length&&S.state!='over'){if(S.rift)S.leave=2;else over(false)}}
 function bindNet(s){
  s.on('connect',()=>netStatus('Conectado al servidor. Crea una sala o únete con un código.'));
- s.on('connect_error',()=>netStatus('No se pudo conectar con el servidor. Comprueba que estÃ© encendido y que el cÃ³digo de sala sea correcto.'));
+ s.on('connect_error',()=>netStatus('No se pudo conectar con el servidor. Comprueba que esté encendido y que el código de sala sea correcto.'));
  s.on('disconnect',()=>{if(NET.on)netLeaveUI('Se ha perdido la conexión con el servidor.')});
  s.on('errorMsg',m=>netStatus(String(m)));
  s.on('roomList',list=>{const b=$('publicRooms');b.textContent='';
