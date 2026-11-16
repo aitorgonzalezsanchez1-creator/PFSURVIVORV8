@@ -1944,7 +1944,7 @@ function bindNet(s){
   renderRoom();if(!NET.playing)lobby();
   if(!NET.playing)netStatus(d.host?'Sala lista. Comparte el código con tus amigos y pulsa «Empezar».':'Estás en la sala. Espera a que el anfitrión empiece.')});
  s.on('gameStart',d=>{
-  NET.on=true;NET.host=d.host;NET.me=d.me;NET.roster=d.roster;NET.meta=d.roster.map(r=>r.meta||null);NET.keys={};NET.playing=true;NET.ovDone=false;NET.pending=null;NET.seq=0;NET.snapHz=d.roster.length<=2?20:15;coop=false;diff=d.diff;
+  NET.on=true;NET.host=d.host;NET.me=d.me;NET.roster=d.roster;NET.meta=d.roster.map(r=>r.meta||null);NET.keys={};NET.playing=true;NET.ovDone=false;NET.pending=null;NET.seq=0;NET.snapHz=d.roster.length<=2?24:20;coop=false;diff=d.diff;
   $('cards').style.display='';
   if(d.host)start();
   else{S=null;['lobby','over','levelup','pause','meta','codes','coinbox'].forEach(i=>$(i).classList.add('hidden'));$('hud').classList.remove('hidden');$('hp2w').classList.add('hidden');$('team').classList.remove('hidden')}});
