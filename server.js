@@ -152,7 +152,7 @@ io.on('connection', socket => {
     const room = rooms.get(socket.data.room);
     if (!room || !room.started || room.host !== socket.id) return;
     if (typeof snapshot !== 'string' || snapshot.length > 1_500_000) return;
-    socket.volatile.to(room.code).emit('snapshot', snapshot);
+    socket.to(room.code).emit('snapshot', snapshot);
   });
 
   socket.on('levelup', d => {
